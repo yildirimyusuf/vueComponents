@@ -25,11 +25,6 @@ export default {
     getImgUrl() {
     var images = require.context('../assets/', false, /\.png$/)
     return images('./' + this.Icon + ".png")
-    },
-    created() {
-    let ckeditor = document.createElement('script');
-    ckeditor.setAttribute('src',"//cdn.ckeditor.com/4.6.2/full/ckeditor.js");
-    document.head.appendChild(ckeditor);
     }
   }
 }
