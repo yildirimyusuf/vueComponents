@@ -1,27 +1,35 @@
 <template>
-  <div class="container">
-    <Data/>
+  <div class="info-header">
+    <Info
+        :Header="Header"
+        :Text="Text"
+        :Style="Style"
+        :Icon="Icon"
+        :Border="Border"
+        :FontType="FontType"
+    />
   </div>
 </template>
 
 <script>
-import Data from './components/Data.vue'
+import Info from './components/Info.vue';
+import Data from './components/Data.vue';
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
+    Info,
     Data
+  },
+  data() {
+    return {
+      Header: "",
+      Text: "Info Text",
+      Style: "green-info",
+      Icon: "",
+      Border: true
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
