@@ -1,33 +1,37 @@
 <template>
   <div class="info-header">
-    <Info
+    <DataDisplayer
         :Header="Header"
-        :Text="Text"
-        :Style="Style"
-        :Icon="Icon"
-        :Border="Border"
-        :FontType="FontType"
+        :datas="datas"
     />
   </div>
 </template>
 
 <script>
-import Info from './components/Info.vue';
-import Data from './components/Data.vue';
+import DataDisplayer from './components/DataDisplayer.vue'
 
 export default {
   name: 'app',
   components: {
-    Info,
-    Data
+    DataDisplayer
   },
   data() {
     return {
-      Header: "",
-      Text: "Info Text",
-      Style: "green-info",
-      Icon: "",
-      Border: true
+      Header: "Buraya Header Gelecek",
+      datas:[
+        {
+          key: 'Ek Hesap Limiti',value:' 500 TL'
+        },
+        {
+          key: 'Ek Hesap Toplam Borç',value:' 200 TL'
+        },
+        {
+          key: 'Ek Hesap Faiz Borcu',value:' 1000 TL'
+        },
+        {
+          key: 'Ek Hesap Kullanılabilir Limiti',value:' 1000 TL'
+        }
+      ]
     }
   }
 }
